@@ -1,0 +1,16 @@
+<h1>Create your new post here:</h1>
+<%= form_with url: '/create', local: true do |form| %>
+
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+
+  <br>
+  <%= form.label :content %>
+  <%= form.text_field :content %>
+
+  <br>
+  <%= form.submit 'Add Post' %>
+<% end %>
+
+<li> <%= link_to 'home', home_path %> </li>
+
