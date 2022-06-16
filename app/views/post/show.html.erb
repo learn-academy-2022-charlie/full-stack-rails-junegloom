@@ -2,7 +2,9 @@
 <p> <%= @post.content %>
 </p>
 
+<br>
 <li> <%= link_to 'home', posts_path %> </li>
+<p> <%= link_to 'edit post', edit_post_path %></p>
 
 <p> <%= button_to 'delete post', delete_post_path(@post), method: :delete, form: { data: { 'turbo-confirm': 'are you sure?' } } %> </p>
 
