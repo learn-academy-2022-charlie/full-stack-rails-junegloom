@@ -1,5 +1,5 @@
 <h1>Create your new post here:</h1>
-<%= form_with url: '/create', local: true do |form| %>
+<%= form_with model: @post do |form| %>
 
   <%= form.label :title %>
   <%= form.text_field :title %>
@@ -12,5 +12,5 @@
   <%= form.submit 'Add Post' %>
 <% end %>
 
-<li> <%= link_to 'home', home_path %> </li>
+<li> <%= link_to 'home', posts_path %> </li>
 

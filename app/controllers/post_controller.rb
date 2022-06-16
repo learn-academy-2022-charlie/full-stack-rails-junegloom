@@ -1,26 +1,27 @@
 class PostController < ApplicationController
-    def home 
+    def index
      @posts = Post.all
     end 
     
-    def post 
+    def show
         @post = Post.find(params[:id])
     end 
 
-    def new_post
+    def new
+        @post = Post.new
     end
 
     def create 
         @post = Post.create(post_params) 
         if @post.valid? 
-            redirect_to home_path
+            redirect_to posts_path
         end 
     end
 
     def destroy
         @post = Post.find(params[:id])
         if @post.destroy
-            redirect_to home_path
+            redirect_to posts_path
         end
     end
 
