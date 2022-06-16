@@ -3,3 +3,6 @@
 </p>
 
 <li> <%= link_to 'home', home_path %> </li>
+
+<p> <%= button_to 'delete post', delete_post_path(@post), method: :delete, form: { data: { 'turbo-confirm': 'are you sure?' } } %> </p>
+

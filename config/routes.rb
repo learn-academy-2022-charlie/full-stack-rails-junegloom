@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   get '/post/:id' => 'post#post', as:'post'
   get '/new' => 'post#new_post'
   post '/create'=> 'post#create'
-  # delete 'post/:id' => 'post#destroy', as: 'delete_post'
+  delete '/post/:id' => 'post#destroy', as: 'delete_post'
   
 end
